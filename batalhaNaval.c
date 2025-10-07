@@ -16,6 +16,16 @@ int main(){
         }
     }
 
+    // Determinação das coordenadas dos navios
+    
+    // Coordenadas do navio 1
+    int linha_navio1 = 6;
+    int coluna_navio1 = 7;
+
+    // Coordenadas navio 2
+    int linha_navio2 = 1;
+    int coluna_navio2 = 6;
+
 
 
 
