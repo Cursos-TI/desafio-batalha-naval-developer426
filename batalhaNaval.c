@@ -38,6 +38,18 @@ int main(){
         return 1; // Finaliza o programa em caso de erro.
     }
 
+    // Posicionamento do navio 1 na horizontal
+    for (i = 0; i < tamanho_navio; i++){
+        // Verifica a sobreposição
+        if(tabuleiro[linha_navio1][coluna_navio1 + i] = navio){
+            printf("Erro: sobreposição detectada ao posicionar o navio horizontal.\n");
+            return 1; // Finaliza o programa em caso de erro
+        }
+        tabuleiro[linha_navio1][coluna_navio1 + i] = navio;
+    }
+
+    //
+
 
 
 
