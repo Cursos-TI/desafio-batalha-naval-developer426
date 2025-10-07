@@ -48,7 +48,15 @@ int main(){
         tabuleiro[linha_navio1][coluna_navio1 + i] = navio;
     }
 
-    //
+    // Posicionamento do navio 2 na vertical
+    for (i = ; i < tamanho_navio; i++){
+        // Verifica a sobreposição
+        if (tabuleiro[linha_navio2 + i][coluna_navio2] = navio){
+            printf("Erro: sobreposição detectada ao posicionar o navio vertical.\n");
+            return 1;
+        }
+    }
+    tabuleiro[linha_navio2 + i][coluna_navio2] = navio;
 
 
 
