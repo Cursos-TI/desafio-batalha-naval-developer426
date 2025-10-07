@@ -4,3 +4,39 @@
 #define tamanho_navio 3 // Tamanho dos navios
 #define agua 0 // Representa a água no tabuleiro
 #define navio 3 // Representa o navio no tabuleiro
+
+int main(){
+    int tabuleiro[tamanho_tabuleiro][tamanho_tabuleiro];
+    int i, j;
+
+    // Tabuleiro com definição 0 (água)
+    for (i = 0; i < tamanho_tabuleiro; i++){
+        for (j = 0; j < tamanho_tabuleiro; j++){
+            tabuleiro[i][j] = agua;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
