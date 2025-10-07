@@ -32,7 +32,13 @@ int main(){
         return 1; // Finaliza o programa em caso de erro
     }
 
-    
+    // Validação dos limites na vertical para o navio 2
+    if (linha_navio2 + tamanho_navio > tamanho_tabuleiro){
+        printf("Erro: o navio vertical excede os limites do tabuleiro!\n");
+        return 1; // Finaliza o programa em caso de erro
+    }
+
+
 
 
 
