@@ -26,6 +26,14 @@ int main(){
     int linha_navio2 = 1;
     int coluna_navio2 = 6;
 
+    // Validação dos limites na horizontal para o navio 1
+    if (coluna_navio1 + tamanho_navio > tamanho_tabuleiro){
+        printf("Erro: o navio na horizontal excede os limites do tabuleiro!\n");
+        return 1; // Finaliza o programa em caso de erro
+    }
+
+    
+
 
 
 
