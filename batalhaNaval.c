@@ -110,6 +110,37 @@ int main(){
         }
     }
 
+    // --- DEFINIÇÃO DOS PONTOS DE ORIGEM DAS HABILIDADE ---
+    int linha_origem_cone = 0;
+    int coluna_origem_cone = 4;
+
+    int linha_origem_cuz = 8;
+    int coluna_origem_cruz = 2;
+
+    int linha_origem_octaedro = 7;
+    int coluna_origem_octaedro = 7;
+
+    // --- SOBREPOSIÇÃO DAS HABILIDADES NO TABULEIRO ---
+
+    // Habilidade cone
+    for (i = 0; i < TAMANHO_HABILIDADE; i++) {
+        for (j = 0; j < TAMANHO_HABILIDADE; j++) {
+            // Confere se a posição na amtriz de habilidade precisa ser ativada (valor 1)
+            if (habilidade_cone[i][j] == 1) {
+                // Determina a posição equivalente no tabuleiro principal
+                // A operação (i - centro) ajusta o ponto de referência, fazendo com que a origem da habilidade fique alinhada ao centro da matriz
+                int target_linha = linha_origem_cone + i; // Para o cone, a origem é o topo e não o centro
+                int target_coluna = coluna_origem_cone + (j - centro);
+
+                // Validação para respeitar os limites do tabuleiro
+                if (target_linha >= 0 && target_linha < TAMANHO_TABULEIRO &&
+                    target_coluna >= 0 && target_coluna < TAMANHO_TABULEIRO) {
+                    tabuleiro[target_linha][target_coluna] = HABILIDADE;
+                }
+            }
+        }
+    }
+
 
 
 
