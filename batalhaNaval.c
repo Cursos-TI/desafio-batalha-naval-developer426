@@ -122,7 +122,7 @@ int main(){
 
     // --- SOBREPOSIÇÃO DAS HABILIDADES NO TABULEIRO ---
 
-    // Habilidade cone
+    // Habilidade CONE
     for (i = 0; i < TAMANHO_HABILIDADE; i++) {
         for (j = 0; j < TAMANHO_HABILIDADE; j++) {
             // Confere se a posição na amtriz de habilidade precisa ser ativada (valor 1)
@@ -140,6 +140,38 @@ int main(){
             }
         }
     }
+
+    // Habilidade CRUZ
+    for (i = 0; i < TAMANHO_HABILIDADE; i++) {
+        for (j = 0; j < TAMANHO_HABILIDADE; j++) {
+            if (habilidade_cruz[i][j] == 1) {
+                int target_linha = linha_origem_cuz + (i - centro);
+                int target_coluna = coluna_origem_cruz + (j - centro);
+
+                if (target_linha >= 0 && target_linha < TAMANHO_TABULEIRO &&
+                    target_coluna >= 0 && target_coluna < TAMANHO_TABULEIRO) {
+                    tabuleiro[target_linha][target_coluna] = HABILIDADE;
+                }                    
+            }
+        }
+    }
+
+    // Habilidade OCTAEDRO
+    for (i = 0; i < TAMANHO_HABILIDADE; i++) {
+        for (j = 0; j < TAMANHO_HABILIDADE; j++) {
+            if (habilidade_octaedro[i][j] == 1) {
+                int target_linha = linha_origem_octaedro + (i - centro);
+                int target_coluna = coluna_origem_octaedro + (j - centro);
+
+                if (target_linha >= 0 && target_linha < TAMANHO_TABULEIRO &&
+                    target_coluna >= 0 && target_coluna < TAMANHO_TABULEIRO) {
+                    tabuleiro[target_linha][target_coluna] = HABILIDADE;
+                }
+            }
+        }
+    }
+
+    
 
 
 
