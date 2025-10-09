@@ -171,24 +171,41 @@ int main(){
         }
     }
 
-    
+    // --- EXIBIÇÃO DO TABULEIRO ---
+printf("\n  --- TABULEIRO BATALHA NAVAL ---\n");
+printf("\n");
+
+// 1. Impressão do cabeçalho das colunas (0 a 9)
+// Pula 4 espaços para alinhar com o "Índice da Linha" ("%2d | ")
+printf("    |");
+for (j = 0; j < TAMANHO_TABULEIRO; j++) {
+    printf("%3d", j); // Agora usa "%3d" para garantir 3 espaços (2 para o número + 1 de espaço)
+}
+printf("\n");
+
+// 2. Impressão da linha separadora
+// Pula 4 hífens para alinhar com o "Índice da Linha" (os 4 primeiros caracteres)
+printf("----"); 
+// Multiplica o número de hífens por 3 (pois cada coluna ocupa 3 espaços)
+for (j = 0; j < TAMANHO_TABULEIRO * 3; j++) {
+    printf("-");
+}
+printf("\n");
 
 
+// 3. Impressão das linhas e do conteúdo do tabuleiro
+for (i = 0; i < TAMANHO_TABULEIRO; i++) {
+    printf("%2d |", i); // Impressão do índice da linha
+    for (j = 0; j < TAMANHO_TABULEIRO; j++) {
+        printf("%3d", tabuleiro[i][j]); // Usa "%3d" para 3 espaços de coluna
+    }
+    printf("\n");
+}
 
+// Legenda dos atributos
+printf("\nLegenda: 0 = Água | 3 = Navio | 5 = Área de habilidade\n");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return 0;
 }
 
 
